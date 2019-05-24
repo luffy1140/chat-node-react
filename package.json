@@ -1,0 +1,45 @@
+
+{
+  
+  "name": "chat-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "nodemon": "^1.19.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-icons": "^3.7.0",
+    "react-scripts": "3.0.1",
+    "socket.io": "^2.2.0",
+    "uuid": "^3.3.2"
+  },
+  "homepage": "https://luffy1140.github.io/chat-node-react",
+  "scripts": {
+    "start": "concurrently 'npm run react' 'npm run server'",
+    "react": "react-scripts start",
+    "build": "react-scripts build",
+    "server": "nodemon src/server/index.js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
